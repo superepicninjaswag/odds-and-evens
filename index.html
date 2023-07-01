@@ -8,6 +8,14 @@
                 return (Math.random() < 0.5) ? 0 : 1;
             }
 
+            function playGame(playerSelection, computerSelection) {
+                if ((playerSelection + computerSelection) % 2 == 0) {
+                    return "Evens win!";
+                } else {
+                    return "Odds win!";
+                }
+            }
+
             console.log(getComputerChoice())
         </script>
     </head>
