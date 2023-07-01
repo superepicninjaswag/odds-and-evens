@@ -4,7 +4,11 @@
         <meta charset="utf-8">
         <title>Odds and Evens</title>
         <script>
-            
+            function getComputerChoice() {
+                return (Math.random() < 0.5) ? 0 : 1;
+            }
+
+            console.log(getComputerChoice())
         </script>
     </head>
     <body>
