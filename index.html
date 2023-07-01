@@ -15,6 +15,17 @@
                     return "Odds win!";
                 }
             }
+
+            function playGame() {
+                alert("Pick odds or evens.")
+                for(let i = 0; i < 5; i += 1){
+                    player = prompt("Input 1 or 2 (fingers)");
+                    result = playRound(player, getComputerChoice());
+                    console.log(result);
+                }
+            }
+
+            playGame();
         </script>
     </head>
     <body>
