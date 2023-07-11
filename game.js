@@ -22,7 +22,21 @@ function getComputerChoice() {
 }
 
 function playRound(e) {
+    let playerChoice = (e.target.id == ONE) ? 1 : 2;
+    let computerChoice = getComputerChoice();
     
+    let resultMessage = "";
+
+    if (playerChoice == computerChoice) {
+        resultMessage += "Evens win!"
+    } else {
+        resultMessage += "Odds win!"
+    }
+
+    const resultList = document.querySelector('.results ul');
+    const newResult = document.createElement('li');
+    newResult.textContent = resultMessage;
+    resultList.prepend(newResult);
 }
 
 function pickTeam(e) {
