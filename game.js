@@ -16,6 +16,10 @@ const twoButton = document.createElement('button');
 twoButton.textContent = '✌️ Two';
 twoButton.id = 'two';
 
+const statusHeader = document.querySelector('h2');
+const oddCounter = document.querySelector('#odd-counter');
+const evenCounter = document.querySelector('#even-counter');
+
 
 function getComputerChoice() {
     return (Math.random() < 0.5) ? 1 : 2;
@@ -33,10 +37,8 @@ function playRound(e) {
         resultMessage += "Odds win!"
     }
 
-    const resultList = document.querySelector('.results ul');
-    const newResult = document.createElement('li');
-    newResult.textContent = resultMessage;
-    resultList.prepend(newResult);
+    resultMessage += ` (you: ${playerChoice}, computer: ${computerChoice})`;
+    statusHeader.textContent = resultMessage;
 }
 
 function pickTeam(e) {
@@ -57,6 +59,8 @@ function pickTeam(e) {
 
     oneButton.addEventListener('click', playRound);
     twoButton.addEventListener('click', playRound);
+
+    statusHeader.textContent = `You're on the ${playerTeam}s`;
 }
 
 oddButton.addEventListener('click', pickTeam);
