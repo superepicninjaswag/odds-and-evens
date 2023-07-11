@@ -1,22 +1,49 @@
+let playerTeam;
+const ODD = 'odd';
+const EVEN = 'even';
+const ONE = 'one';
+const TWO = 'two';
+
+const oddButton = document.querySelector('#odd');
+const evenButton = document.querySelector('#even');
+const orText = document.querySelector('.choices span');
+
+const oneButton = document.createElement('button');
+oneButton.textContent = '☝️ One';
+oneButton.id = 'one';
+
+const twoButton = document.createElement('button');
+twoButton.textContent = '✌️ Two';
+twoButton.id = 'two';
+
+
 function getComputerChoice() {
     return (Math.random() < 0.5) ? 1 : 2;
 }
 
-function playRound(playerSelection, computerSelection) {
-    if ((playerSelection + computerSelection) % 2 == 0) {
-        return "Evens win!";
-    } else {
-        return "Odds win!";
-    }
+function playRound(e) {
+    
 }
 
-function playGame() {
-    alert("Pick odds or evens.")
-    for(let i = 0; i < 5; i += 1){
-        player = prompt("Input 1 or 2 (fingers)");
-        result = playRound(player, getComputerChoice());
-        console.log(result);
+function pickTeam(e) {
+    if (e.target.id === ODD) {
+        playerTeam = ODD;
+    } else if (e.target.id === EVEN) {
+        playerTeam = EVEN;
     }
+
+    orText.remove();
+    oddButton.remove();
+    evenButton.remove();
+
+    const choices = document.querySelector('.choices');
+    choices.appendChild(oneButton);
+    choices.appendChild(orText);
+    choices.appendChild(twoButton);
+
+    oneButton.addEventListener('click', playRound);
+    twoButton.addEventListener('click', playRound);
 }
 
-playGame();
+oddButton.addEventListener('click', pickTeam);
+evenButton.addEventListener('click', pickTeam);
