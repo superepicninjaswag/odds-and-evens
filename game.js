@@ -32,9 +32,11 @@ function playRound(e) {
     let resultMessage = "";
 
     if (playerChoice == computerChoice) {
-        resultMessage += "Evens win!"
+        resultMessage += "Evens win!";
+        evenCounter.textContent = +evenCounter.textContent + 1;
     } else {
-        resultMessage += "Odds win!"
+        resultMessage += "Odds win!";
+        oddCounter.textContent = +oddCounter.textContent + 1;
     }
 
     resultMessage += ` (you: ${playerChoice}, computer: ${computerChoice})`;
