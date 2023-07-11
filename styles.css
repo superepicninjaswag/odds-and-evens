@@ -13,6 +13,8 @@ body {
     gap: 10px;
 }
 
-.results h2 {
-    display: inline-block;
+.results {
+    display: flex;
+    gap: 25px;
+    text-align: center;
 }
