@@ -1,5 +1,6 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+    font-size: 4vw;
     margin: 0;
 
     display: flex;
@@ -10,11 +11,16 @@ body {
 
 .choices {
     display: flex;
-    gap: 10px;
+    align-items: center;
+    gap: 25px;
 }
 
 .results {
     display: flex;
     gap: 25px;
     text-align: center;
+}
+
+#odd, #even, #one, #two {
+    padding: 30px;
 }
