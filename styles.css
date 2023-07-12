@@ -2,7 +2,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
     font-size: 4vw;
     margin: 0;
-    background-color: cornsilk;
+    background-color: maroon;
 
     display: flex;
     flex-direction: column;
@@ -24,6 +24,8 @@ body {
 
 #odd, #even, #one, #two {
     padding: 30px;
+    color: whitesmoke;
+    background-color: black;
     border-radius: 6px;
     width: 15vh;
 }
