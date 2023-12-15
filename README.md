@@ -2,4 +2,4 @@
 This project demonstrates proficiency at working with the DOM and events.
 
 # Related Projects
-[Too Many Rabbits](https://github.com/superepicninjaswag/too-many-rabbits)
+[Stop The Fucking Bunnies](https://github.com/superepicninjaswag/stop-the-fucking-bunnies)
